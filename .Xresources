@@ -36,33 +36,38 @@
 *colorBD: #ffffff
 
 !## XTERM
-XTerm.customization:     -none
+XTerm.customization: -none
 XTerm.background:        #000000
 XTerm.VT100.background:  #000000
-XTerm.foreground:        #aaaaaa
-XTerm.VT100.foreground:  #aaaaaa
-XTerm.termName:    xterm-256color
-XTerm*ttyModes:    start ^- stop ^-
-XTerm*boldMode:    false
+XTerm.foreground:        #ffffff
+XTerm.VT100.foreground:  #ffffff
+XTerm.termName: xterm-256color
+XTerm*ttyModes: start ^- stop ^-
+XTerm*boldMode: false
 XTerm*allowBoldFonts: false
-XTerm*scrollBar:   false
+XTerm*scrollBar: false
 !XTerm*backarrowKey: false
 XTerm*colorBDMode: true
-XTerm*visualBell: true
-XTerm*bellIsUrgent: true
+XTerm*cursorBlink: true
+XTerm*cursorOffTime: 600
+XTerm*cursorOnTime:  600
+!XTerm*visualBell: true
+!XTerm*bellIsUrgent: true
 XTerm*eightBitInput: false
 XTerm*modifyCursorKeys: 2
 XTerm*trimSelection: true
 XTerm*CharClass: 33:48,37-38:48,45-47:48,58:48,61:48,63-64:48,126:48,161-255:48
 XTerm*activeIcon: true
 XTerm.VT100.translations: #override \
-	Ctrl<Key>comma: scroll-forw(1,page-1) \n\
-	Ctrl<Key>period: scroll-back(1,page-1) \n\
-	Shift Ctrl<Key>minus: smaller-vt-font() \n\
-	Shift Ctrl<Key>equal: larger-vt-font() \n\
-	Ctrl<Key>9: smaller-vt-font() \n\
-	Ctrl<Key>0: larger-vt-font() \n\
-	Ctrl<Key>1: set-render-font(toggle)
+  Ctrl<Key>comma:  scroll-forw(1,page-1) \n\
+  Ctrl<Key>period: scroll-back(1,page-1) \n\
+  Shift Ctrl<Key>minus: smaller-vt-font() \n\
+  Shift Ctrl<Key>equal: larger-vt-font() \n\
+  Ctrl<Key>9: smaller-vt-font() \n\
+  Ctrl<Key>0: larger-vt-font() \n\
+  Ctrl<Key>1: set-render-font(toggle) \n\
+  Shift Ctrl<Key>v: insert-selection(CLIPBOARD) \n\
+  Shift Ctrl<Key>c: copy-selection(CLIPBOARD)
 
 #ifdef FIXED
 XTerm.VT100.font:         FIXED-iso8859-1
@@ -103,11 +108,11 @@ XTerm*faceName: MONOSPACE:MEDIUM
 #ifdef MONOSIZE
 XTerm*faceSize: MONOSIZE
 #else
-XTerm*faceSize: 14
+XTerm*faceSize: 11
 #endif
 XTerm*faceSize1: 10
-XTerm*faceSize2: 12
-XTerm*faceSize3: 14
-XTerm*faceSize4: 17
-XTerm*faceSize5: 21
-XTerm*faceSize6: 24
+XTerm*faceSize2: 11
+XTerm*faceSize3: 12
+XTerm*faceSize4: 13
+XTerm*faceSize5: 14
+XTerm*faceSize6: 15
