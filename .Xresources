@@ -43,6 +43,7 @@ XTerm.foreground:        #ffffff
 XTerm.VT100.foreground:  #ffffff
 XTerm.termName: xterm-256color
 XTerm*ttyModes: start ^- stop ^-
+XTerm*loginShell: true
 XTerm*boldMode: false
 XTerm*allowBoldFonts: false
 XTerm*scrollBar: false
