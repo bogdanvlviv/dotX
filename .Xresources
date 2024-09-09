@@ -1,118 +1,35 @@
-! ~/.Xresources
-! vim:set foldmethod=expr foldexpr=getline(v\:lnum)=~'^!##'?'>1'\:'=':
-
-*international: true
-*customization: -color
-
-!## TERMINAL COMMON
-#ifndef FIXED
-#if WIDTH > 1800
-#define FIXED -misc-fixed-medium-r-normal--20-*-*-*-c-*
-#elif WIDTH > 1450
-#define FIXED -misc-fixed-medium-r-normal--18-*-*-*-c-*
-#elif WIDTH > 1150
-#define FIXED -misc-fixed-medium-r-normal--14-*-*-*-c-*
-#else
-#define FIXED -misc-fixed-medium-r-semicondensed--13-*-*-*-c-*
-#endif
-#endif
-
-*color0:  #000000
-*color1:  #aa0000
-*color2:  #00aa00
-*color3:  #aa5522
-*color4:  #0000ee
-*color5:  #aa00aa
-*color6:  #00aaaa
-*color7:  #aaaaaa
-*color8:  #555555
-*color9:  #ff4444
-*color10: #44ff44
-*color11: #ffff00
-*color12: #5c5cff
-*color13: #ff00ff
-*color14: #00ffff
-*color15: #ffffff
-*colorBD: #ffffff
-
-!## XTERM
-XTerm.customization: -none
-XTerm.background:        #000000
-XTerm.VT100.background:  #000000
-XTerm.foreground:        #ffffff
-XTerm.VT100.foreground:  #ffffff
 XTerm.termName: xterm-256color
-XTerm*loginShell: true
+
+XTerm.background: #000000
+XTerm.foreground: #ffffff
+XTerm.VT100.background: #000000
+XTerm.VT100.foreground: #ffffff
+
+XTerm*faceName: Monospace
+XTerm*faceSize: 11
+XTerm*faceSize1: 11
+XTerm*faceSize2: 12
+XTerm*faceSize3: 13
+XTerm*faceSize4: 14
+XTerm*faceSize5: 15
+XTerm*faceSize6: 16
+XTerm*faceSize7: 18
+
 XTerm*boldMode: false
 XTerm*allowBoldFonts: false
+
 XTerm*scrollBar: false
-!XTerm*backarrowKey: false
-XTerm*colorBDMode: true
+
 XTerm*cursorBlink: true
 XTerm*cursorOffTime: 600
-XTerm*cursorOnTime:  600
-!XTerm*visualBell: true
-!XTerm*bellIsUrgent: true
-XTerm*eightBitInput: false
-XTerm*modifyCursorKeys: 2
-XTerm*trimSelection: true
-XTerm*CharClass: 33:48,37-38:48,45-47:48,58:48,61:48,63-64:48,126:48,161-255:48
-XTerm*activeIcon: true
-XTerm.VT100.translations: #override \
-  Ctrl<Key>comma:  scroll-forw(1,page-1) \n\
-  Ctrl<Key>period: scroll-back(1,page-1) \n\
-  Shift Ctrl<Key>minus: smaller-vt-font() \n\
-  Shift Ctrl<Key>equal: larger-vt-font() \n\
-  Ctrl<Key>9: smaller-vt-font() \n\
-  Ctrl<Key>0: larger-vt-font() \n\
-  Ctrl<Key>1: set-render-font(toggle) \n\
-  Shift Ctrl<Key>v: insert-selection(CLIPBOARD) \n\
-  Shift Ctrl<Key>c: copy-selection(CLIPBOARD)
+XTerm*cursorOnTime: 600
 
-#ifdef FIXED
-XTerm.VT100.font:         FIXED-iso8859-1
-XTerm.font:               FIXED-iso8859-1
-XTerm*boldFont:           FIXED-iso8859-1
-XTerm*utf8Fonts.font:     FIXED-iso10646-1
-XTerm*utf8Fonts.boldFont: FIXED-iso10646-1
-#else
-XTerm.VT100.font:         -misc-fixed-medium-r-normal--20-*-*-*-c-*-iso8859-1
-XTerm.font:               -misc-fixed-medium-r-normal--20-*-*-*-c-*-iso8859-1
-XTerm*boldFont:           -misc-fixed-medium-r-normal--20-*-*-*-c-*-iso8859-1
-XTerm*utf8Fonts.font:     -misc-fixed-medium-r-normal--20-*-*-*-c-*-iso10646-1
-XTerm*utf8Fonts.boldFont: -misc-fixed-medium-r-normal--20-*-*-*-c-*-iso10646-1
-#endif
-#if WIDTH >= 1920
-XTerm*renderFont: true
-#endif
-XTerm.fontMenu.fontdefault.Label: Default
-XTerm.fontMenu.font1.Label: Tiny
-XTerm*font1:                -misc-fixed-medium-r-normal--6-*-*-*-c-*-iso8859-1
-XTerm*utf8Fonts.font1:      -misc-fixed-medium-r-normal--6-*-*-*-c-*-iso10646-1
-XTerm.fontMenu.font2.Label: Small
-XTerm*font2:                -misc-fixed-medium-r-normal--8-*-*-*-c-*-iso8859-1
-XTerm*utf8Fonts.font2:      -misc-fixed-medium-r-normal--8-*-*-*-c-*-iso10646-1
-XTerm.fontMenu.font3.Label: Semicondensed
-XTerm*font3:                -misc-fixed-medium-r-semicondensed--13-*-*-*-c-*-iso8859-1
-XTerm*utf8Fonts.font3:      -misc-fixed-medium-r-semicondensed--13-*-*-*-c-*-iso10646-1
-XTerm.fontMenu.font4.Label: Medium
-XTerm*font4:                -misc-fixed-medium-r-normal--14-*-*-*-c-*-iso8859-1
-XTerm*utf8Fonts.font4:      -misc-fixed-medium-r-normal--14-*-*-*-c-*-iso10646-1
-XTerm.fontMenu.font5.Label: Large
-XTerm*font5:                -misc-fixed-medium-r-normal--18-*-*-*-c-*-iso8859-1
-XTerm*utf8Fonts.font5:      -misc-fixed-medium-r-normal--18-*-*-*-c-*-iso10646-1
-XTerm.fontMenu.font6.Label: Huge
-XTerm*font6:                -misc-fixed-medium-r-normal--20-*-*-*-c-*-iso8859-1
-XTerm*utf8Fonts.font6:      -misc-fixed-medium-r-normal--20-*-*-*-c-*-iso10646-1
-XTerm*faceName: MONOSPACE:MEDIUM
-#ifdef MONOSIZE
-XTerm*faceSize: MONOSIZE
-#else
-XTerm*faceSize: 11
-#endif
-XTerm*faceSize1: 10
-XTerm*faceSize2: 11
-XTerm*faceSize3: 12
-XTerm*faceSize4: 13
-XTerm*faceSize5: 14
-XTerm*faceSize6: 15
+XTerm.VT100.translations: #override \n\
+  Ctrl <Key>comma: scroll-back(1,halfpage) \n\
+  Ctrl <Key>period: scroll-forw(1,halfpage) \n\
+  Shift Ctrl <Key>minus: smaller-vt-font() \n\
+  Shift Ctrl <Key>equal: larger-vt-font() \n\
+  Shift Ctrl <Key>v: insert-selection(CLIPBOARD) \n\
+  Shift Ctrl <Key>c: copy-selection(CLIPBOARD) \n\
+
+XTerm*loginShell: true
