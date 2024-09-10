@@ -21,15 +21,15 @@ XTerm*allowBoldFonts: false
 XTerm*scrollBar: false
 
 XTerm*cursorBlink: true
-XTerm*cursorOffTime: 600
 XTerm*cursorOnTime: 600
+XTerm*cursorOffTime: 600
 
 XTerm.VT100.translations: #override \n\
-  Ctrl <Key>comma: scroll-back(1,halfpage) \n\
-  Ctrl <Key>period: scroll-forw(1,halfpage) \n\
+  Shift Ctrl <Key>c: copy-selection(CLIPBOARD) \n\
+  Shift Ctrl <Key>v: insert-selection(CLIPBOARD) \n\
+  Shift Ctrl <Key>k: scroll-back(1,halfpage) \n\
+  Shift Ctrl <Key>j: scroll-forw(1,halfpage) \n\
   Shift Ctrl <Key>minus: smaller-vt-font() \n\
   Shift Ctrl <Key>equal: larger-vt-font() \n\
-  Shift Ctrl <Key>v: insert-selection(CLIPBOARD) \n\
-  Shift Ctrl <Key>c: copy-selection(CLIPBOARD) \n\
 
 XTerm*loginShell: true
