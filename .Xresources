@@ -1,11 +1,9 @@
-XTerm.termName: xterm-256color
+XTerm*termName: xterm-256color
 
-XTerm.background: #000000
-XTerm.foreground: #ffffff
-XTerm.VT100.background: #000000
-XTerm.VT100.foreground: #ffffff
+XTerm*background: #000000
+XTerm*foreground: #ffffff
 
-XTerm*faceName: Monospace
+XTerm*faceName: Mono
 XTerm*faceSize: 11
 XTerm*faceSize1: 11
 XTerm*faceSize2: 12
@@ -15,7 +13,6 @@ XTerm*faceSize5: 15
 XTerm*faceSize6: 16
 XTerm*faceSize7: 17
 
-XTerm*boldMode: false
 XTerm*allowBoldFonts: false
 
 XTerm*scrollBar: false
@@ -24,12 +21,12 @@ XTerm*cursorBlink: true
 XTerm*cursorOnTime: 600
 XTerm*cursorOffTime: 600
 
-XTerm.VT100.translations: #override \n\
-  Shift Ctrl <Key>c: copy-selection(CLIPBOARD) \n\
-  Shift Ctrl <Key>v: insert-selection(CLIPBOARD) \n\
-  Shift Ctrl <Key>k: scroll-back(1,halfpage) \n\
-  Shift Ctrl <Key>j: scroll-forw(1,halfpage) \n\
-  Shift Ctrl <Key>minus: smaller-vt-font() \n\
-  Shift Ctrl <Key>equal: larger-vt-font() \n\
+XTerm*VT100*translations: #override \n\
+  Ctrl Shift <Key>c: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>v: insert-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>k: scroll-back(1,halfpage) \n\
+  Ctrl Shift <Key>j: scroll-forw(1,halfpage) \n\
+  Ctrl Shift <Key>-: smaller-vt-font() \n\
+  Ctrl Shift <Key>=: larger-vt-font()
 
 XTerm*loginShell: true
